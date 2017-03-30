@@ -1,6 +1,9 @@
 const express = require('express');
-const app = express();
 const bodyParser = require('body-parser');
+const sqlite3 = require('sqlite3').verbose();
+const app = express();
+
+var db = new sqlite3.Database('database.db');
 
 app.set('view engine', 'pug');
 app.set('views', './views');

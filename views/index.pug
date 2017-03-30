@@ -5,3 +5,10 @@ html
 	body
 		div.container
 			include ./banner.pug
+			ul
+				each val in #{items}
+					li=
+						div(class="all #{val.category}")
+							img(src="#{val.image}")
+							h3 #{val.title}
+							p #{val.descripton}
